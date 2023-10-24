@@ -72,3 +72,25 @@ export function confirm(status: boolean) {
     }
   }
 }
+
+export function prefix(label: string) {
+  return function (target: any, key: string) {
+    let value = target[key];
+
+    const getter = () => {
+      return value;
+    }
+
+    const setter = (next: string) => {
+      console.log(`updating value...`);
+      value = `${label} ${next}`;
+    }
+
+    Object.defineProperty(target, key, {
+      get: getter,
+      set: setter,
+      enumerable: true,
+      configurable: true
+    })
+  }
+}

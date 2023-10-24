@@ -1,10 +1,11 @@
-import { Logger, confirm, connect, counter, frozen, init, test } from "../decorators/common";
+import { Logger, confirm, connect, counter, frozen, init, prefix, test } from "../decorators/common";
 
 /** Calculator with basic operations */
 @frozen
 @init
 @Logger("Hello world")
 export class Calculator {
+  @prefix("-> -> ->")
   total = 0;
 
   constructor() {
