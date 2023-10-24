@@ -15,6 +15,6 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "library-advanced-typescript-course": "^0.0.1"
+    "library-advanced-typescript-course": "^0.0.3"
   }
 }

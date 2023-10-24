@@ -1,6 +1,6 @@
 {
   "name": "library-advanced-typescript-course",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/main.js",
   "types": "dist/types/main.d.ts",

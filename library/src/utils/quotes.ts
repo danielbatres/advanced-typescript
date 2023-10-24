@@ -6,7 +6,6 @@ import * as _ from "lodash";
 /** Get a random quote from a base JSON file */
 export default function getARandomQuote(): Quote {
   const randomNumber = _.random(0, content.quotes.length);
-  console.log(`Selection ${randomNumber}`);
   const quote: Quote = content.quotes[randomNumber];
 
   return quote;
