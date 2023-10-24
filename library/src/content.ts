@@ -2,7 +2,7 @@
 import { Quote } from './interfaces/quote.interface';
 import { Riddle } from './interfaces/riddle.interface'; */
 
-import { Quote, Joke, ComplicatedJoke as HardJoke, Riddle } from "@batres/models"
+import { Quote, Joke, Riddle } from "@batres/models"
 
 export const quote: Quote = {
   quote:
@@ -16,11 +16,11 @@ export const joke: Joke = {
   category: 'simple joke',
 };
 
-export const hardJoke: HardJoke = {
+export const hardJoke: Joke = {
   body:
     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   category: 'simple joke',
-  level: 3,
+  level: "3",
 };
 
 export const riddle: Riddle = {
