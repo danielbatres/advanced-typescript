@@ -1,4 +1,4 @@
-import { Logger, connect, counter, frozen, init, test } from "../decorators/common";
+import { Logger, confirm, connect, counter, frozen, init, test } from "../decorators/common";
 
 /** Calculator with basic operations */
 @frozen
@@ -11,6 +11,7 @@ export class Calculator {
     // console.log('Calculator has been loaded...');
   }
 
+  @confirm(false)
   /** Sum any quantity of values */
   sum(...values: number[]): number {
     return values.reduce((previous, current) => {
@@ -32,6 +33,10 @@ export class Calculator {
 }
 
 const calc = new Calculator();
+
+const result = calc.sum(1, 2, 3);
+
+console.log(`Result: ${result}`);
 
 // console.log(calc.total);
 

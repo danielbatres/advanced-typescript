@@ -53,3 +53,22 @@ export function frozen(constructor: Function) {
   Object.freeze(constructor);
   Object.freeze(constructor.prototype);
 }
+
+export function confirm(status: boolean) {
+  return function (
+    target: Object,
+    key: string | symbol,
+    descriptor: PropertyDescriptor
+  ) {
+    const original = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+      if (status) {
+        const result = original.apply(this, args);
+
+        return result;
+      } else {
+        return 0;
+      }
+    }
+  }
+}
