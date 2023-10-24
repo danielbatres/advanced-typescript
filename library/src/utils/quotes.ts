@@ -1,4 +1,3 @@
-import { quote } from "../content";
 import { Quote } from "../interfaces/quote.interface";
 import * as content from "../assets/content.json";
 import * as _ from "lodash";
