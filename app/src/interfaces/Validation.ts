@@ -9,4 +9,4 @@ export interface CustomUser {
   name: string
 }
 
-const user: CustomUser;
+let user: CustomUser;
