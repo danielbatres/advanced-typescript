@@ -1,7 +1,5 @@
-import { CustomUser } from "./interfaces/Validation";
+import { makeA } from "library-advanced-typescript-course";
 
-console.log("Hello");
+const resultJoke = makeA("joke");
 
-const user: CustomUser = {
-  name: "Daniel"
-}
+console.log(resultJoke);
