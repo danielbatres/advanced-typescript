@@ -1,11 +1,4 @@
-function Logger(message: string) {
-  console.log(`Message: ${message}`);
-
-  return function (target: any) {
-    console.log(`Decorated class: ${target}`);
-    console.log(target);
-  }
-}
+import { Logger } from "decorators/common";
 
 /** Calculator with basic operations */
 @Logger("Hello world")
