@@ -2,7 +2,7 @@
 import { Quote } from './interfaces/quote.interface';
 import { Riddle } from './interfaces/riddle.interface'; */
 
-import { Quote, Joke, ComplicatedJoke as HardJoke, Riddle } from "./interfaces"
+import { Quote, Joke, ComplicatedJoke as HardJoke, Riddle } from "@batres/models"
 
 export const quote: Quote = {
   quote:

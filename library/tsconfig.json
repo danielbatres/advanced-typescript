@@ -3,6 +3,10 @@
     "target": "es5",
     "module": "commonjs",
     "outDir": "./dist",
-    "strict": true
+    "strict": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@batres/models": ["interfaces/index.ts"]
+    }
   }
 }
