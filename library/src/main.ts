@@ -1,6 +1,7 @@
 import * as fact from './content';
 import { Fact } from './interfaces/common.types';
 import { Calculator } from './utils/calc';
+import getQuote, { getAllQuotes } from './utils/quotes';
 
 /** Generate a fact! Just pass the one that you need as a parameter!
  * Possible facts:
@@ -12,7 +13,9 @@ import { Calculator } from './utils/calc';
 export function makeA(topic: string): Fact {
   switch (topic.toLowerCase()) {
     case 'quote':
-      return fact.quote;
+      return getQuote();
+    case 'all-quotes':
+      return getAllQuotes();
     case 'joke':
       return fact.joke;
     case 'hardJoke':
@@ -25,7 +28,7 @@ export function makeA(topic: string): Fact {
   }
 }
 
-const factResult = makeA('quote');
+const factResult = makeA('all-quotes');
 
 console.log(factResult);
 
